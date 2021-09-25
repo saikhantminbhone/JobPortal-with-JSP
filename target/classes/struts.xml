@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+"http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+	<constant name="struts.enable.DynamicMethodInvocation"
+		value="false" />
+	<constant name="struts.devMode" value="false" />
+	<package name="default" namespace="/" extends="struts-default">
+
+
+	
+	<action name="Login">
+			<result>jsp/login.jsp</result>
+	</action>
+	<action name="Index">
+			<result>jsp/index.jsp</result>
+	</action>
+	<action name="Register">
+			<result>jsp/register.jsp</result>
+	</action>
+	<action name="RegisterConfirm">
+			<result>jsp/registrationSuccessful.jsp</result>
+	</action>
+	<action name="ForgetPassword">
+			<result>jsp/forgetPassword.jsp</result>
+	</action>
+
+	<action name="Home">
+			<result>jsp/home.jsp</result>
+	</action>
+	
+	<action name="Admin">
+			<result>jsp/admin.jsp</result>
+	</action>
+
+	<action name="post_job">
+			<result>jsp/postJob.jsp</result>
+	</action>
+
+	<action name="public_profile">
+			<result>jsp/publicProfile.jsp</result>
+	</action>
+
+	<action name="register" class="SKMB.action.RegisterAction">
+			<result name="REGISTER">jsp/registerConfirm.jsp</result>
+			<result name="REGISTER_FAIL">jsp/register.jsp</result>
+	</action>
+
+	<action name="login" class="SKMB.action.LoginAction">
+			<result name="LOGIN">jsp/home.jsp</result>
+			<result name="ADMIN_LOGIN">jsp/admin.jsp</result>
+			<result name="LOGIN_FAIL">jsp/login.jsp</result>
+	</action>
+
+	
+	<action name="forget_password" class="SKMB.action.ForgetPasswordAction">
+			<result name="EMAIL_CONFIRM">jsp/forgetPasswordConfirm.jsp</result>
+			<result name="EMAIL_FAIL">jsp/forgetPassword.jsp</result>
+	</action>
+	
+	
+	<action name="reset_password" class="SKMB.action.ResetPasswordAction">
+			<result name="RESET_PASSWORD_SUCCESS">jsp/ResetPasswordSuccess.jsp</result>
+	</action>
+	
+	<action name="logout" class="SKMB.action.logoutAction" >
+			<result name="LOGOUT">jsp/index.jsp</result>
+	</action>
+	
+	<action name="search" class="SKMB.action.SearchAction">
+			<result name="RESULTS">jsp/searchResults.jsp</result>
+	</action>
+	
+	<action name="profile" class="SKMB.action.ProfileAction">
+			<result name="PROFILE">jsp/profile.jsp</result>
+	</action>
+	<action name="public_profile" class="SKMB.action.publicProfileAction">
+			<result name="PUBLIC_PROFILE">jsp/publicProfile.jsp</result>
+	</action>
+	
+	<action name="editProfile" class="SKMB.action.ProfileAction">
+			<result name="PROFILE">jsp/editProfile.jsp</result>
+	</action>
+	
+	<action name="update" class="SKMB.action.UpdateProfileAction">
+			<result name="UPDATED">jsp/profile.jsp</result>
+			<result name="UPDATE_FAIL">jsp/editProfile.jsp</result>
+	</action>
+	
+	<action name="job_details" class="SKMB.action.JobDetailsAction">
+			<result name="DETAILS">jsp/jobDetails.jsp</result>
+	</action>
+	<action name="job_data" class="SKMB.action.JobDataAction">
+			<result name="JOBDATASAVED">jsp/postJobSuccessful.jsp</result>
+	</action>
+	
+	<action name="ResetPassword" class="SKMB.action.resetPasswordConfirm">
+			<result name="EMAIL_CONFIRM">jsp/resetPassword.jsp</result>
+	</action>
+	
+	
+	<action name="invite" class="SKMB.action.InviteAction">
+			<result name="INVITE">jsp/invite.jsp</result>
+	</action>
+	
+	<action name="ban" class="SKMB.action.BanAction">
+			<result name="BAN">jsp/ban.jsp</result>
+	</action>
+	<action name="invited" class="SKMB.action.InvitedAction">
+			<result name="INVITED">jsp/inviteSuccessful.jsp</result>
+	</action>
+	
+	<action name="manage_user" class="SKMB.action.ManageUserAction">
+			<result name="MANAGE">jsp/manageUser.jsp</result>
+	</action>
+	</package>
+</struts>
